@@ -11,7 +11,7 @@ COLORS = {
     'cat': (255, 255, 0),  # 黄色
     'bear': (255, 165, 0),  # 橙色
     'skis': (255, 192, 203),  # 粉色
-    # 可以根据需要继续添加其他类别
+
 }
 
 # YOLOv8 模型加载
@@ -34,8 +34,8 @@ def detect_objects(image_path, filename):
     # 可视化目标检测结果
     draw = ImageDraw.Draw(img)
 
-    # 设置字体（如果没有字体文件，字体大小和样式需要调整）
-    font = ImageFont.load_default()  # 可以换成合适的字体文件
+    # 设置字体
+    font = ImageFont.load_default()  
 
     # 遍历每个检测框，使用左上角和右下角坐标（xyxy）
     for i, box in enumerate(boxes.xyxy):  # 使用 xyxy 直接获取框的坐标
